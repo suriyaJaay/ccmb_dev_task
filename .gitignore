@@ -1,0 +1,17 @@
+# Node
+node_modules/
+**/node_modules/**
+npm-debug.log
+yarn-error.log
+
+# Angular
+/dist/
+/out-tsc/
+/coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env

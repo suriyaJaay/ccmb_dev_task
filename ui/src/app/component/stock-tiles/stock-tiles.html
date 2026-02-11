@@ -1,0 +1,40 @@
+<div
+  class="stock-tiles-container"
+  [class.disabled]="!activeStocks"
+  [class.stockRaised]="activeStocks && stockData.updatePrice! > 0"
+  [class.stockFall]="activeStocks && stockData.updatePrice! < 0"
+  [class.stockStable]="activeStocks && stockData.updatePrice === 0"
+>
+  <h3>{{ stockData.brand }}</h3>
+
+  <p>
+    Current Price:
+    <b>{{ (activeStocks ? stockData.price : turnOffStockUpdate?.price) | number: '1.2-2' }}</b>
+  </p>
+  <p>
+    Updated Price:
+    <b
+      >{{
+        (activeStocks ? stockData.updatePrice : turnOffStockUpdate?.updatePrice) | number: '1.2-2'
+      }}
+      ({{
+        (activeStocks ? stockData.updatePricePercent : turnOffStockUpdate?.updatePricePercent)
+          | number: '1.2-2'
+      }}%)</b
+    >
+  </p>
+  <p>
+    Last Trade:
+    <b>{{ activeStocks ? stockData.lastTradeTime : turnOffStockUpdate?.lastTradeTime }}</b>
+  </p>
+  <p>
+    VOL:
+    <b>{{ (activeStocks ? stockData.volume : turnOffStockUpdate?.volume) | number: '1.0-0' }}</b>
+  </p>
+  <div class="btn-wrapper">
+    <label class="toggleCheck">
+      <input type="checkbox" [checked]="activeStocks" (change)="onToggle()" />
+      <span class="slider round"></span>
+    </label>
+  </div>
+</div>
