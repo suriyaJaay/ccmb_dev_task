@@ -51,3 +51,6 @@ npm install
 5. Open http://localhost:4200 in your browser [**** in-cognito mode ***]
 
 
+
+<img width="1431" height="445" alt="image" src="https://github.com/user-attachments/assets/33fafbb1-b66e-4377-8b82-bcc1714646a0" />
+
