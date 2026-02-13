@@ -1,9 +1,9 @@
-<div class="stock-grid">
+<div class="stock-grid" >
   @for (stock of stocksSignal(); track stock.brand) {
     <app-stock-tiles
       [stockData]="stock"
       [activeStocks]="activeMap[stock.brand]"
-      (toggle)="toggle(stock.brand)"
+      (toggle)="toggle($event)"
     >
     </app-stock-tiles>
   }

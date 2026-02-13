@@ -1,3 +1,61 @@
+<!-- <div
+  class="stock-tiles-container"
+  [class.disabled]="!activeStocks"
+  [class.stockRaised]="activeStocks && stockData.updatePrice! > 0"
+  [class.stockFall]="activeStocks && stockData.updatePrice! < 0"
+  [class.stockStable]="activeStocks && stockData.updatePrice === 0"
+>
+  <h3 class="stock-name">{{ stockData.brand }}</h3>
+
+
+  <div class="mobile-only">
+    <p>
+      Current Price:
+      {{ (activeStocks ? stockData.price : turnOffStockUpdate?.price) | number: '1.2-2' }}
+    </p>
+    <p>
+      Daily High:
+      {{ (activeStocks ? stockData.dailyHigh : turnOffStockUpdate?.dailyHigh) | number: '1.2-2' }}
+    </p>
+    <p>
+      Daily Low:
+      {{ (activeStocks ? stockData.dailyLow : turnOffStockUpdate?.dailyLow) | number: '1.2-2' }}
+    </p>
+  </div>
+
+
+  <div class="desktop-only">
+    <p>
+      Current Price:
+      {{ (activeStocks ? stockData.price : turnOffStockUpdate?.price) | number: '1.2-2' }}
+    </p>
+    <p>
+      Daily High:
+      {{ (activeStocks ? stockData.dailyHigh : turnOffStockUpdate?.dailyHigh) | number: '1.2-2' }}
+    </p>
+    <p>
+      Daily Low:
+      {{ (activeStocks ? stockData.dailyLow : turnOffStockUpdate?.dailyLow) | number: '1.2-2' }}
+    </p>
+    <p>
+      52W High:
+      {{ (activeStocks ? stockData.yearHigh : turnOffStockUpdate?.yearHigh) | number: '1.2-2' }}
+    </p>
+    <p>
+      52W Low:
+      {{ (activeStocks ? stockData.yearLow : turnOffStockUpdate?.yearLow) | number: '1.2-2' }}
+    </p>
+  </div>
+
+  <div class="btn-wrapper">
+    <label class="toggleCheck">
+      <input type="checkbox" [checked]="activeStocks" (change)="onToggle()" />
+      <span class="slider round"></span>
+    </label>
+  </div>
+</div>
+ -->
+
 <div
   class="stock-tiles-container"
   [class.disabled]="!activeStocks"

@@ -9,4 +9,9 @@ export interface StockModalData {
   updatePricePercent?: number;
   volume?: number;
   lastTradeTime?: string;
+
+  dailyHigh?: number;
+  dailyLow?: number;
+  yearHigh?: number;
+  yearLow?: number;
 }

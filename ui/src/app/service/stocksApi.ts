@@ -8,7 +8,7 @@ import { StockModalData } from '../modals/stock.modal';
 export class StocksApi {
   private _ws: WebSocket | null = null;
 
-  // predefinedStocks = ['AMZN', 'META', 'NVDA', 'NFLX', 'INTC', "AMZN", "META", "NVDA", "NFLX", "INTC"];
+  /*  predefinedStocks = ['AMZN', 'META', 'NVDA', 'NFLX', 'INTC', "AMZN", "META", "NVDA", "NFLX", "INTC"]; */
   predefinedStocks = [
     'BINANCE:BTCUSDT',
     'BINANCE:ETHUSDT',
@@ -59,6 +59,10 @@ export class StocksApi {
                 : 0,
             volume: trade.v ?? 0,
             lastTradeTime: trade.t ? new Date(trade.t).toLocaleTimeString() : '',
+            dailyHigh: trade.dailyHigh,
+            dailyLow: trade.dailyLow,
+            yearHigh: trade.yearHigh,
+            yearLow: trade.yearLow,
           };
 
           if (idx >= 0) {
